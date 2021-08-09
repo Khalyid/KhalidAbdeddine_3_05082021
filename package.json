@@ -1,0 +1,19 @@
+{
+  "name": "p3_abdeddine_khalid",
+  "version": "1.0.0",
+  "description": "Site Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khalyid/KhalidAbdeddine_3_05082021.git"
+  },
+  "author": "Khalid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khalyid/KhalidAbdeddine_3_05082021/issues"
+  },
+  "homepage": "https://github.com/Khalyid/KhalidAbdeddine_3_05082021#readme"
+}
