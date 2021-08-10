@@ -5,26 +5,32 @@ header {
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: "Roboto";
+  background-color: #F6F6F6;
+  text-align: center;
+}
+.description .fas {
+  font-size: 1.2em;
 }
 .description button {
   padding: 1em 2em 1em 2em;
   border-radius: 35px;
   border: none;
+  color: white;
+  background: linear-gradient(170deg, #EC73DA, #A05ADC);
+  box-shadow: 0px 0px 3px grey;
 }
 
 .fonctionnement {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Roboto";
 }
-
-.listfonctionnement {
+.fonctionnement .listfonctionnement {
   display: flex;
 }
-.listfonctionnement__numero {
+.fonctionnement .listfonctionnement__numero {
   position: relative;
   left: 10px;
   top: 20px;
@@ -35,12 +41,50 @@ header {
   font-size: 10px;
   color: white;
 }
-.listfonctionnement__button {
+.fonctionnement .listfonctionnement__button {
   height: 4em;
   border-radius: 15px;
   border: none;
   padding: 1em 2em 1em 2em;
   margin: 1em 1em 1em 0;
+}
+.fonctionnement .listfonctionnement__button:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement .listfonctionnement__button .fas {
+  margin-right: 1em;
+}
+
+.listrestaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+}
+.listrestaurant .restaurant {
+  margin-bottom: 1.5em;
+  border-radius: 15px;
+  box-shadow: 0 0 7px gray;
+}
+.listrestaurant .restaurant__image {
+  height: 10em;
+  width: 90vw;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.listrestaurant .restaurant__descriptionimage {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1em 0 10px;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+.listrestaurant .restaurant__descriptionimage span {
+  font-weight: bold;
+}
+.listrestaurant .restaurant__descriptionimage .far {
+  font-size: 25px;
+  margin-top: 27px;
 }
 
 /*# sourceMappingURL=style.css.map */

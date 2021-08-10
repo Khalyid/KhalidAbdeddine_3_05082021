@@ -3,7 +3,29 @@
     flex-direction: column;
     align-items: center;
 }
-
+@mixin restaurant {
+    margin-bottom: 1em;
+    &__image {
+      height: 10em;
+      width: 90vw;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+    &__descriptionimage{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 1em 0 10px;
+        font-family: "Roboto";
+        font-size: 20px;
+        span{
+            font-weight: bold;
+        }
+        .far{
+            font-size: 25px;
+            margin-top: 15px;
+        }
+    }
+}
 header{
     font-family:"Shrikhand";
     font-size: 3em;
@@ -11,37 +33,84 @@ header{
 }
 
 .description {
-    @include centrer-colonne;
+    font-family: "Roboto";
+    background-color: #F6F6F6;
+    text-align: center;
+    .fas{
+        font-size: 1.2em; 
+     }
     button {
         padding: 1em 2em 1em 2em;
         border-radius: 35px;
         border: none;
+        color: white;
+        background: linear-gradient(170deg, #EC73DA ,#A05ADC);
+        box-shadow: 0px 0px 3px grey;
+        
     }
 }
 
 .fonctionnement {
     @include centrer-colonne;
+    font-family: "Roboto";
+    .listfonctionnement {
+        display: flex;
+        &__numero {
+            position: relative;
+            left: 10px;
+            top: 20px ;
+            background-color: #9356DC;
+            height: 12px;
+            border-radius: 50%;
+            padding: 5px 7px 5px 7px;
+            font-size: 10px;
+            color: white;
+        }
+        &__button {
+            height: 4em;
+            border-radius: 15px;
+            border : none;
+            padding: 1em 2em 1em 2em;
+            margin : 1em 1em 1em 0; 
+            &:hover {
+                background-color: #F5EDFF;
+            }
+            .fas{
+                margin-right: 1em;
+            }
+        }
+    }
 }
 
-.listfonctionnement {
-    display: flex;
-    &__numero {
-        position: relative;
-        left: 10px;
-        top: 20px ;
-        background-color: #9356DC;
-        height: 12px;
-        border-radius: 50%;
-        padding: 5px 7px 5px 7px;
-        font-size: 10px;
-        color: white;
-    }
-    &__button {
-        height: 4em;
+.listrestaurant{
+    @include centrer-colonne;
+    background-color: #F6F6F6;
+    .restaurant {
+        margin-bottom: 1.5em;
         border-radius: 15px;
-        border : none;
-        padding: 1em 2em 1em 2em;
-        margin : 1em 1em 1em 0; ;
+        box-shadow: 0 0 7px gray;
+        &__image {
+            height: 10em;
+            width: 90vw;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            }
+            &__descriptionimage{
+                display: flex;
+                justify-content: space-between;
+                margin: 0 1em 0 10px;
+                font-family: "Roboto";
+                font-size: 20px;
+
+                span{
+                    font-weight: bold;
+                }
+                .far{
+                    font-size: 25px;
+                    margin-top: 27px;
+                }
+            }
+        }
     }
-}
+
 
