@@ -1,0 +1,46 @@
+header {
+  font-family: "Shrikhand";
+  font-size: 3em;
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.description button {
+  padding: 1em 2em 1em 2em;
+  border-radius: 35px;
+  border: none;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listfonctionnement {
+  display: flex;
+}
+.listfonctionnement__numero {
+  position: relative;
+  left: 10px;
+  top: 20px;
+  background-color: #9356DC;
+  height: 12px;
+  border-radius: 50%;
+  padding: 5px 7px 5px 7px;
+  font-size: 10px;
+  color: white;
+}
+.listfonctionnement__button {
+  height: 4em;
+  border-radius: 15px;
+  border: none;
+  padding: 1em 2em 1em 2em;
+  margin: 1em 1em 1em 0;
+}
+
+/*# sourceMappingURL=style.css.map */
