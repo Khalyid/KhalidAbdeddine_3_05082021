@@ -107,4 +107,20 @@ header {
   margin-top: 27px;
 }
 
+footer {
+  color: white;
+  background-color: #353535;
+  padding: 1em 0 1em 1em;
+}
+footer h1 {
+  font-family: "Shrikhand";
+  font-size: 1.5em;
+  font-weight: normal;
+}
+footer ul {
+  list-style: none;
+  line-height: 30px;
+  padding-left: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
