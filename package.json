@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Khalyid/KhalidAbdeddine_3_05082021.git"
+    "url": "git+https://github.com/Khalyid/KhalidAbdeddine_3_05082021.git"
   },
   "author": "Khalid",
   "license": "ISC",
