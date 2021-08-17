@@ -19,16 +19,50 @@
     opacity: 0;
   }
 }
-@keyframes slide-in-right {
+@-webkit-keyframes slide-left {
   0% {
-    transform: scale(0);
-    color: greenyellow;
-    opacity: 0%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-    transform: scale(1);
-    color: greenyellow;
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    color: #99E2D0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
+    width: 0;
+  }
+  100% {
+    color: #99E2D0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+    width: 4vw;
+  }
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 a {
@@ -226,7 +260,7 @@ footer ul {
   font-family: "Roboto";
   border-radius: 15px;
   margin: 1em;
-  padding: 7px 10px 20px 10px;
+  padding-left: 10px;
   line-height: 5px;
 }
 .menu__description .testslide {
@@ -236,23 +270,26 @@ footer ul {
   margin-top: 30px;
 }
 .menu__description .slide-in-right {
+  width: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99e2d0;
-  width: 0%;
-  width: 5em;
-  height: 6em;
   opacity: 0;
+  border-radius: 0 15px 15px 0;
   overflow: hidden;
 }
-.menu__description .slide-in-right .far {
-  font-size: 50px;
+.menu__description .slide-in-right .fas {
+  font-size: 30px;
   color: white;
 }
 .menu__description:hover .slide-in-right {
-  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.menu__description:hover .fas {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
 }
 
 .commander {
