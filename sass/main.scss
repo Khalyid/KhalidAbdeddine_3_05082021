@@ -53,17 +53,17 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
 @keyframes slide-left {
   0% {
     color: #99e2d0;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+
     opacity: 1;
     width: 0;
+   
   }
   100% {
     color: #99e2d0;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+
     opacity: 1;
     width: 4vw;
+    
   }
 }
 @-webkit-keyframes rotate-center {
@@ -288,6 +288,24 @@ header {
         span {
           font-weight: bold;
         }
+        .fas {
+          position: relative;
+          left: 26px;
+          top: 1px;
+          font-size: 27px;
+          margin-top: 22px;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          cursor: pointer;
+          &:hover {
+            animation-name: progress-bar;
+            animation-duration: 750ms;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
+          }
+        }
         .far {
           font-size: 25px;
           margin-top: 27px;
@@ -315,15 +333,15 @@ footer {
 
 /* MENU RESTAURANT A LA FRANCAISE*/
 
-div .menu-imgrestaurant {
+.menu-imgrestaurant {
   width: 100%;
-  height: 20em;
-  border: black solid 2px;
-  object-fit:contain;
+  height: 25rem;
+  object-fit: fill;
+ 
 }
 
 .menu-alafrançaise {
-  position: relative;
+
   bottom: 6em;
   height: max-content;
   background-color: #f6f6f6;
@@ -355,6 +373,7 @@ div .menu-imgrestaurant {
         animation-iteration-count: 1;
         transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
       }
+      
     }
     .far {
       font-size: 25px;
@@ -373,6 +392,7 @@ div .menu-imgrestaurant {
   }
 }
 .menu__description {
+  width: 22em;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -381,9 +401,15 @@ div .menu-imgrestaurant {
   margin: 1em;
   padding-left: 10px;
   line-height: 5px;
+  text-overflow: ellipsis;
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  .haut-description{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
   .testslide {
     display: flex;
   }
@@ -398,7 +424,6 @@ div .menu-imgrestaurant {
     background-color: #99e2d0;
     opacity: 0;
     border-radius: 0 15px 15px 0;
-    overflow: hidden;
 
     .fas {
       font-size: 30px;
@@ -447,51 +472,24 @@ div .menu-imgrestaurant {
 
 .commander {
   @include bouton--pink;
-  display: flex;
-  align-items: center;
+  margin-left: 50%;
+  cursor: pointer;
+  
 }
 
 
 @media (min-width:1100px) {
 
     .fonctionnement {
-      font-family: "Roboto";
       display: flex;
       justify-content: space-around;
       .listfonctionnement {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        &__numero {
-          position: relative;
-          left: 10px;
-          top: 30px;
-          background-color: #9356dc;
-          height: 12px;
-          border-radius: 50%;
-          padding: 5px 8px 10px 8px;
-          font-size: 15px;
-          color: white;
-        }
         &__button {
           width: 28vw;
-          height: 5em;
-          border-radius: 15px;
-          border: none;
-          padding: 1em 2em 1em 0em;
-          margin: 1em 1em 1em 0;
-          font-size: 17px;
-          font-weight: bold;
-          background-color: #f6f6f6;
-          &:hover {
-            background-color: #f5edff;
-          }
-          .fas {
-            margin-right: 1em;
-          }
         }
       }
     }
+
     .placement-resto{
       display: flex;
       justify-content: space-between;
@@ -500,12 +498,14 @@ div .menu-imgrestaurant {
       .listrestaurant {
         .restaurant {
           margin:2em;
-          border-radius: 15px;
-          box-shadow: 0 0 7px gray;
           &__image {
             width: 45vw;
           }
         }
       }
     }
+  .fiche-menu{
+    display: flex;
+    justify-content: space-around;
+  }
 }
