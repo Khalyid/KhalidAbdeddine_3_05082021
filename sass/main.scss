@@ -12,9 +12,11 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
   color: white;
   background: $color-btn--pink;
   box-shadow: 0px 0px 3px grey;
-  &:hover {
-    background-color: red;
+  &:hover{
+    background: linear-gradient(170deg, lighten(#ec73da, 5) , lighten(#a05adc,5));
+    box-shadow: 0px 0px 8px #403e3e;
   }
+
   @content;
 }
 
@@ -53,7 +55,6 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
 @keyframes slide-left {
   0% {
     color: #99e2d0;
-
     opacity: 1;
     width: 0;
    
@@ -62,7 +63,7 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
     color: #99e2d0;
 
     opacity: 1;
-    width: 4vw;
+    width: 4em;
     
   }
 }
@@ -70,20 +71,24 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
+    opacity: 0;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+    opacity: 1;
   }
 }
 @keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
+    opacity: 0;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+    opacity: 1;
   }
 }
 
@@ -192,7 +197,7 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
 a {
   text-decoration: none;
 }
-header {
+.header-accueil {
   font-family: "Shrikhand";
   font-size: 3em;
   text-align: center;
@@ -332,21 +337,33 @@ footer {
 }
 
 /* MENU RESTAURANT A LA FRANCAISE*/
+.header-restaurant{
+  display: flex;
+  align-items: center;
+  font-family: "Shrikhand";
 
+  .fas{
+    font-size: 1.2em;
+    position: relative;
+    left: 1em;
+  }
+  div{
+    font-size: 2em;
+    margin:auto;
+  }
+}
 .menu-imgrestaurant {
   width: 100%;
-  height: 25rem;
-  object-fit: fill;
+  object-fit: contain;
  
 }
 
 .menu-alafrançaise {
-
-  bottom: 6em;
-  height: max-content;
+  margin: auto;
+  position: relative;
+  margin-top: -3em;
   background-color: #f6f6f6;
   width: 100%;
-  margin-top: 0;
   padding-top: 1em;
   padding-bottom: 1em;
   border-radius: 20px 20px 0 0;
@@ -356,7 +373,7 @@ footer {
     font-family: "Shrikhand";
     font-weight: 100;
     margin: 0 20px 0 20px;
-    .fas {
+    .coeur-menu {
       position: relative;
       left: 26px;
       top: 1px;
@@ -368,12 +385,10 @@ footer {
       cursor: pointer;
       &:hover {
         animation-name: progress-bar;
-        animation-duration: 750ms;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
         transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
       }
-      
     }
     .far {
       font-size: 25px;
@@ -392,16 +407,16 @@ footer {
   }
 }
 .menu__description {
-  width: 22em;
+  
+  width: 85vw;
   display: flex;
   justify-content: space-between;
   background-color: white;
   font-family: "Roboto";
   border-radius: 15px;
   margin: 1em;
-  padding-left: 10px;
+  padding-left:10px;
   line-height: 5px;
-  text-overflow: ellipsis;
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -415,15 +430,17 @@ footer {
   }
   .prix {
     margin-top: 30px;
+    margin-right: 10px;
   }
   .slide-in-right {
-    width: 0%;
+
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #99e2d0;
     opacity: 0;
     border-radius: 0 15px 15px 0;
+    width: 0;
 
     .fas {
       font-size: 30px;
@@ -472,13 +489,15 @@ footer {
 
 .commander {
   @include bouton--pink;
-  margin-left: 50%;
+  margin: 2em auto 2em auto;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   
 }
 
 
-@media (min-width:1100px) {
+@media (min-width:1200px) {
 
     .fonctionnement {
       display: flex;
@@ -494,6 +513,7 @@ footer {
       display: flex;
       justify-content: space-between;
     }
+    
     .fiche-restaurant{
       .listrestaurant {
         .restaurant {
@@ -504,8 +524,39 @@ footer {
         }
       }
     }
-  .fiche-menu{
-    display: flex;
-    justify-content: space-around;
-  }
+
+    .fiche-menu{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .menu-imgrestaurant {
+      height: 25rem;
+      object-fit: fill;
+    }
+    
+    .menu-alafrançaise {
+      margin-top: -5em;
+      width: 95%;
+      .menu-alafrançaise__titre {
+        .fas {
+          &:hover {
+            animation-name: progress-bar;
+            animation-duration: 600ms;
+            animation-fill-mode: both;
+            animation-iteration-count: 1;
+            transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
+          }
+          &:focus{
+            color: $color-btn--pink;
+          }       
+        }
+      }
+    }
+
+    .menu__description {
+      width: 21em;
+    }
 }
+
+

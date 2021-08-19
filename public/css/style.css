@@ -38,27 +38,31 @@
   100% {
     color: #99e2d0;
     opacity: 1;
-    width: 4vw;
+    width: 4em;
   }
 }
 @-webkit-keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
+    opacity: 0;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+    opacity: 1;
   }
 }
 @keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
+    opacity: 0;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+    opacity: 1;
   }
 }
 @-webkit-keyframes fade-in-bottom {
@@ -164,7 +168,7 @@ a {
   text-decoration: none;
 }
 
-header {
+.header-accueil {
   font-family: "Shrikhand";
   font-size: 3em;
   text-align: center;
@@ -204,7 +208,8 @@ header {
   box-shadow: 0px 0px 3px grey;
 }
 .description button:hover {
-  background-color: red;
+  background: linear-gradient(170deg, #ef89e0, #ac6fe0);
+  box-shadow: 0px 0px 8px #403e3e;
 }
 
 .fonctionnement {
@@ -313,18 +318,32 @@ footer ul {
 }
 
 /* MENU RESTAURANT A LA FRANCAISE*/
+.header-restaurant {
+  display: flex;
+  align-items: center;
+  font-family: "Shrikhand";
+}
+.header-restaurant .fas {
+  font-size: 1.2em;
+  position: relative;
+  left: 1em;
+}
+.header-restaurant div {
+  font-size: 2em;
+  margin: auto;
+}
+
 .menu-imgrestaurant {
   width: 100%;
-  height: 25rem;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .menu-alafrançaise {
-  bottom: 6em;
-  height: max-content;
+  margin: auto;
+  position: relative;
+  margin-top: -3em;
   background-color: #f6f6f6;
   width: 100%;
-  margin-top: 0;
   padding-top: 1em;
   padding-bottom: 1em;
   border-radius: 20px 20px 0 0;
@@ -336,7 +355,7 @@ footer ul {
   font-weight: 100;
   margin: 0 20px 0 20px;
 }
-.menu-alafrançaise .menu-alafrançaise__titre .fas {
+.menu-alafrançaise .menu-alafrançaise__titre .coeur-menu {
   position: relative;
   left: 26px;
   top: 1px;
@@ -347,9 +366,8 @@ footer ul {
   color: transparent;
   cursor: pointer;
 }
-.menu-alafrançaise .menu-alafrançaise__titre .fas:hover {
+.menu-alafrançaise .menu-alafrançaise__titre .coeur-menu:hover {
   animation-name: progress-bar;
-  animation-duration: 750ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
@@ -369,7 +387,7 @@ footer ul {
 }
 
 .menu__description {
-  width: 22em;
+  width: 85vw;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -378,7 +396,6 @@ footer ul {
   margin: 1em;
   padding-left: 10px;
   line-height: 5px;
-  text-overflow: ellipsis;
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
@@ -392,15 +409,16 @@ footer ul {
 }
 .menu__description .prix {
   margin-top: 30px;
+  margin-right: 10px;
 }
 .menu__description .slide-in-right {
-  width: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99e2d0;
   opacity: 0;
   border-radius: 0 15px 15px 0;
+  width: 0;
 }
 .menu__description .slide-in-right .fas {
   font-size: 30px;
@@ -458,14 +476,17 @@ footer ul {
   color: white;
   background: linear-gradient(170deg, #ec73da, #a05adc);
   box-shadow: 0px 0px 3px grey;
-  margin-left: 50%;
+  margin: 2em auto 2em auto;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
 }
 .commander:hover {
-  background-color: red;
+  background: linear-gradient(170deg, #ef89e0, #ac6fe0);
+  box-shadow: 0px 0px 8px #403e3e;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   .fonctionnement {
     display: flex;
     justify-content: space-around;
@@ -489,6 +510,30 @@ footer ul {
   .fiche-menu {
     display: flex;
     justify-content: space-around;
+  }
+
+  .menu-imgrestaurant {
+    height: 25rem;
+    object-fit: fill;
+  }
+
+  .menu-alafrançaise {
+    margin-top: -5em;
+    width: 95%;
+  }
+  .menu-alafrançaise .menu-alafrançaise__titre .fas:hover {
+    animation-name: progress-bar;
+    animation-duration: 600ms;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
+  }
+  .menu-alafrançaise .menu-alafrançaise__titre .fas:focus {
+    color: linear-gradient(170deg, #ec73da, #a05adc);
+  }
+
+  .menu__description {
+    width: 21em;
   }
 }
 
