@@ -150,6 +150,12 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
   }
   
 }
+a{
+  text-decoration: none;
+}
+.footer-link{
+  color: white;
+}
 
 .loader {
   display: flex;
@@ -229,6 +235,7 @@ a {
   }
   button {
     @include bouton--pink;
+    cursor: pointer;
   }
 }
 
@@ -316,6 +323,9 @@ a {
           margin-top: 27px;
         }
       }
+      &:hover{
+        box-shadow: 0 0 12px #403e3e ;
+      }
     }
   }
 }
@@ -354,7 +364,6 @@ footer {
 }
 .menu-imgrestaurant {
   width: 100%;
-  object-fit: contain;
  
 }
 
@@ -416,7 +425,6 @@ footer {
   border-radius: 15px;
   margin: 1em;
   padding-left:10px;
-  line-height: 5px;
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -424,8 +432,9 @@ footer {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin: 5px;
   }
-  .testslide {
+  .slide {
     display: flex;
   }
   .prix {
