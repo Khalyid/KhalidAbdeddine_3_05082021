@@ -433,6 +433,9 @@ footer {
     text-overflow: ellipsis;
     overflow: hidden;
     margin: 5px;
+    p{
+      font-size: 15px;
+    }
   }
   .slide {
     display: flex;
@@ -440,6 +443,7 @@ footer {
   .prix {
     margin-top: 30px;
     margin-right: 10px;
+    font-weight: bold;
   }
   .slide-in-right {
 

@@ -415,12 +415,16 @@ footer ul {
   overflow: hidden;
   margin: 5px;
 }
+.menu__description .haut-description p {
+  font-size: 15px;
+}
 .menu__description .slide {
   display: flex;
 }
 .menu__description .prix {
   margin-top: 30px;
   margin-right: 10px;
+  font-weight: bold;
 }
 .menu__description .slide-in-right {
   display: flex;
