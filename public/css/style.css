@@ -345,8 +345,10 @@ footer ul {
   margin: auto;
 }
 
-.menu-imgrestaurant {
+.menu-imgrestaurant .testimg {
   width: 100%;
+  max-height: 25em;
+  object-fit: cover;
 }
 
 .menu-alafrançaise {
