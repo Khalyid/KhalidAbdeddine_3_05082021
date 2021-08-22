@@ -12,8 +12,12 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
   color: white;
   background: $color-btn--pink;
   box-shadow: 0px 0px 3px grey;
-  &:hover{
-    background: linear-gradient(170deg, lighten(#ec73da, 5) , lighten(#a05adc,5));
+  &:hover {
+    background: linear-gradient(
+      170deg,
+      lighten(#ec73da, 5),
+      lighten(#a05adc, 5)
+    );
     box-shadow: 0px 0px 8px #403e3e;
   }
 
@@ -57,14 +61,12 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
     color: #99e2d0;
     opacity: 1;
     width: 0;
-   
   }
   100% {
     color: #99e2d0;
 
     opacity: 1;
     width: 4em;
-    
   }
 }
 @-webkit-keyframes rotate-center {
@@ -119,41 +121,40 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
 @-webkit-keyframes loader {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 @keyframes loader {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
-            opacity: 0;
+    transform: scale(1);
+    opacity: 0;
   }
 }
 @keyframes loa {
-  0%{
+  0% {
     opacity: 0.8;
     z-index: 1000;
   }
-  90%{
+  90% {
     opacity: 0.8;
   }
-  100%{
+  100% {
     opacity: 0;
   }
-  
 }
-a{
+a {
   text-decoration: none;
 }
-.footer-link{
+.footer-link {
   color: white;
 }
 
@@ -170,34 +171,31 @@ a{
   z-index: -1;
 }
 
-.primaire{
+.primaire {
   background-color: #9356dc;
   height: 2em;
   width: 2em;
   border-radius: 50%;
   margin-right: 1em;
-  -webkit-animation: loader 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3 both;
-	        animation: loader 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3 both;
-  
+  -webkit-animation: loader 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 3 both;
+  animation: loader 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 3 both;
 }
-.secondaire{
-  background-color: #FF79DA ;
+.secondaire {
+  background-color: #ff79da;
   height: 2em;
   width: 2em;
   border-radius: 50%;
   margin-right: 1em;
-  -webkit-animation: loader 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3 both;
-	        animation: loader 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3 both;
-  
+  -webkit-animation: loader 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 3 both;
+  animation: loader 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 3 both;
 }
-.tertiaire{
-  background-color:#99E2D0;
+.tertiaire {
+  background-color: #99e2d0;
   height: 2em;
   width: 2em;
   border-radius: 50%;
-  -webkit-animation: loader 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3 both;
-	        animation: loader 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3 both;
- 
+  -webkit-animation: loader 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 3 both;
+  animation: loader 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 3 both;
 }
 
 a {
@@ -276,7 +274,7 @@ a {
   }
 }
 
-.fiche-restaurant{
+.fiche-restaurant {
   background-color: #f6f6f6;
   font-family: "Roboto";
   .listrestaurant {
@@ -323,8 +321,8 @@ a {
           margin-top: 27px;
         }
       }
-      &:hover{
-        box-shadow: 0 0 12px #403e3e ;
+      &:hover {
+        box-shadow: 0 0 12px #403e3e;
       }
     }
   }
@@ -347,28 +345,27 @@ footer {
 }
 
 /* MENU RESTAURANT A LA FRANCAISE*/
-.header-restaurant{
+.header-restaurant {
   display: flex;
   align-items: center;
   font-family: "Shrikhand";
 
-  .fas{
+  .fas {
     font-size: 1.2em;
     position: relative;
     left: 1em;
   }
-  div{
+  div {
     font-size: 2em;
-    margin:auto;
+    margin: auto;
   }
 }
 .menu-imgrestaurant {
- .testimg{
-   width: 100%;
-   max-height: 25em;
-   object-fit: cover;
- }
-  
+  .testimg {
+    width: 100%;
+    max-height: 25em;
+    object-fit: cover;
+  }
 }
 
 .menu-alafrançaise {
@@ -420,7 +417,6 @@ footer {
   }
 }
 .menu__description {
-  
   width: 85vw;
   display: flex;
   justify-content: space-between;
@@ -428,16 +424,16 @@ footer {
   font-family: "Roboto";
   border-radius: 15px;
   margin: 1em;
-  padding-left:10px;
+  padding-left: 10px;
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  .haut-description{
+  .haut-description {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     margin: 5px;
-    p{
+    p {
       font-size: 15px;
     }
   }
@@ -450,7 +446,6 @@ footer {
     font-weight: bold;
   }
   .slide-in-right {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -510,70 +505,65 @@ footer {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  
 }
 
+@media (min-width: 1200px) {
+  .fonctionnement {
+    display: flex;
+    justify-content: space-around;
+    .listfonctionnement {
+      &__button {
+        width: 28vw;
+      }
+    }
+  }
 
-@media (min-width:1200px) {
+  .placement-resto {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .fonctionnement {
-      display: flex;
-      justify-content: space-around;
-      .listfonctionnement {
-        &__button {
-          width: 28vw;
+  .fiche-restaurant {
+    .listrestaurant {
+      .restaurant {
+        margin: 2em;
+        &__image {
+          width: 45vw;
         }
       }
     }
+  }
 
-    .placement-resto{
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    .fiche-restaurant{
-      .listrestaurant {
-        .restaurant {
-          margin:2em;
-          &__image {
-            width: 45vw;
-          }
+  .fiche-menu {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu-imgrestaurant {
+    height: 25rem;
+    object-fit: fill;
+  }
+
+  .menu-alafrançaise {
+    margin-top: -5em;
+    width: 95%;
+    .menu-alafrançaise__titre {
+      .fas {
+        &:hover {
+          animation-name: progress-bar;
+          animation-duration: 600ms;
+          animation-fill-mode: both;
+          animation-iteration-count: 1;
+          transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
+        }
+        &:focus {
+          color: $color-btn--pink;
         }
       }
     }
+  }
 
-    .fiche-menu{
-      display: flex;
-      justify-content: space-around;
-    }
-
-    .menu-imgrestaurant {
-      height: 25rem;
-      object-fit: fill;
-    }
-    
-    .menu-alafrançaise {
-      margin-top: -5em;
-      width: 95%;
-      .menu-alafrançaise__titre {
-        .fas {
-          &:hover {
-            animation-name: progress-bar;
-            animation-duration: 600ms;
-            animation-fill-mode: both;
-            animation-iteration-count: 1;
-            transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
-          }
-          &:focus{
-            color: $color-btn--pink;
-          }       
-        }
-      }
-    }
-
-    .menu__description {
-      width: 21em;
-    }
+  .menu__description {
+    width: 21em;
+  }
 }
-
-
