@@ -48,12 +48,14 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
 
 @-webkit-keyframes slide-left {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    color: #99e2d0;
+    opacity: 1;
+    width: 0;
   }
   100% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+    color: #99e2d0;
+    opacity: 1;
+    width: 4em;
   }
 }
 @keyframes slide-left {
@@ -64,7 +66,6 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
   }
   100% {
     color: #99e2d0;
-
     opacity: 1;
     width: 4em;
   }
