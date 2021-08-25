@@ -35,16 +35,6 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
   }
 }
 
-@keyframes disparition {
-  0% {
-    color: black;
-    opacity: 1;
-  }
-  100% {
-    color: black;
-    opacity: 0;
-  }
-}
 
 @-webkit-keyframes slide-left {
   0% {
@@ -238,9 +228,12 @@ a {
   }
 }
 
-.fonctionnement {
+.fiche-fonctionnement {
   font-family: "Roboto";
   margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   .listfonctionnement {
     display: flex;
     justify-content: center;
@@ -256,12 +249,14 @@ a {
       color: white;
     }
     &__button {
+      white-space: nowrap;
       width: 90vw;
       height: 5em;
       border-radius: 15px;
       border: none;
       padding: 1em 2em 1em 0em;
       margin: 1em 1em 1em 0;
+      padding-left: 20px;
       font-size: 17px;
       font-weight: bold;
       background-color: #f6f6f6;
@@ -278,6 +273,7 @@ a {
 .fiche-restaurant {
   background-color: #f6f6f6;
   font-family: "Roboto";
+  padding-top: 1em;
   .listrestaurant {
     @include centrer-colonne;
     .restaurant {
@@ -299,13 +295,16 @@ a {
         span {
           font-weight: bold;
         }
+        a{
+          flex:1;
+        }
         .fas {
           position: relative;
           left: 26px;
           top: 1px;
           font-size: 27px;
           margin-top: 22px;
-          background-clip: text;
+          background-clip: inherit;
           -webkit-background-clip: text;
           color: transparent;
           cursor: pointer;
@@ -369,7 +368,8 @@ footer {
   }
 }
 
-.menu-alafrançaise {
+.menu-alafrancaise {
+  font-family: "Roboto";
   margin: auto;
   position: relative;
   margin-top: -3em;
@@ -378,7 +378,7 @@ footer {
   padding-top: 1em;
   padding-bottom: 1em;
   border-radius: 20px 20px 0 0;
-  .menu-alafrançaise__titre {
+  .menu-alafrancaise__titre {
     display: flex;
     justify-content: space-between;
     font-family: "Shrikhand";
@@ -390,15 +390,16 @@ footer {
       top: 1px;
       font-size: 27px;
       margin-top: 22px;
-      background-clip: text;
+      background-clip: inherit;
       -webkit-background-clip: text;
       color: transparent;
       cursor: pointer;
       &:hover {
         animation-name: progress-bar;
-        animation-fill-mode: forwards;
+        animation-fill-mode: both;
         animation-iteration-count: 1;
         transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
+        animation-duration: 1s;
       }
     }
     .far {
@@ -412,20 +413,21 @@ footer {
   h2 {
     font-size: 20px;
     margin-left: 1em;
+    font-weight: unset;
     .soulignement-titre {
       border-bottom: 4px solid #99e2d0;
     }
   }
 }
 .menu__description {
-  width: 85vw;
+  width: 86vw;
   display: flex;
   justify-content: space-between;
   background-color: white;
-  font-family: "Roboto";
   border-radius: 15px;
   margin: 1em;
   padding-left: 10px;
+  cursor: pointer;
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -545,10 +547,10 @@ footer {
     object-fit: fill;
   }
 
-  .menu-alafrançaise {
+  .menu-alafrancaise {
     margin-top: -5em;
     width: 95%;
-    .menu-alafrançaise__titre {
+    .menu-alafrancaise__titre {
       .fas {
         &:hover {
           animation-name: progress-bar;
@@ -557,14 +559,11 @@ footer {
           animation-iteration-count: 1;
           transition-timing-function: cubic-bezier(0.97, 0.08, 0.47, 0.67);
         }
-        &:focus {
-          color: $color-btn--pink;
-        }
       }
     }
   }
 
   .menu__description {
-    width: 21em;
+    width: 25vw;
   }
 }
