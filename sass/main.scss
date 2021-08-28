@@ -124,7 +124,7 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
     opacity: 0;
   }
 }
-@keyframes loa {
+@keyframes loader-full {
   0% {
     opacity: 0.8;
     z-index: 1000;
@@ -139,9 +139,6 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
 a {
   text-decoration: none;
 }
-.footer-link {
-  color: white;
-}
 
 /* ______________PAGE ACCUEIL_________________*/
 
@@ -155,7 +152,7 @@ a {
   width: 100%;
   background-color: white;
   position: fixed;
-  animation: loa 3s both;
+  animation: loader-full 3s both;
   z-index: -1;
   &__primaire {
     background-color: #9356dc;
@@ -192,7 +189,7 @@ a {
 /* LOGO */
 
 .header-accueil {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   font-size: 3em;
   text-align: center;
 }
@@ -212,14 +209,14 @@ a {
 .fa-map-marker-alt {
   span {
     padding-left: 15px;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     white-space: nowrap;
   }
 }
 
 /*DESCRIPTION*/
 .description {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   background-color: #f6f6f6;
   text-align: center;
   padding-top: 20px;
@@ -239,7 +236,7 @@ a {
 /* FONCTIONNEMENT*/
 
 .fiche-fonctionnement {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   margin-bottom: 2em;
   display: flex;
   flex-direction: column;
@@ -284,7 +281,7 @@ a {
 
 .fiche-restaurant {
   background-color: #f6f6f6;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   padding-top: 1em;
   a {
     color: black;
@@ -353,12 +350,14 @@ a {
   }
 }
 
+/*FOOTER*/
+
 footer {
   color: white;
   background-color: #353535;
   padding: 1em 0 1em 1em;
   h1 {
-    font-family: "Shrikhand";
+    font-family: "Shrikhand", sans-serif;
     font-size: 1.5em;
     font-weight: normal;
   }
@@ -366,6 +365,9 @@ footer {
     list-style: none;
     line-height: 30px;
     padding-left: 0;
+  }
+  .footer-link {
+    color: white;
   }
 }
 
@@ -376,8 +378,10 @@ footer {
 .header-restaurant {
   display: flex;
   align-items: center;
-  font-family: "Shrikhand";
-
+  font-family: "Shrikhand", sans-serif;
+  a {
+    color: black;
+  }
   .fas {
     font-size: 1.2em;
     position: relative;
@@ -399,7 +403,7 @@ footer {
 /* MENU */
 
 .menu-alafrancaise {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   margin: auto;
   position: relative;
   margin-top: -3em;
@@ -411,7 +415,7 @@ footer {
   .menu-alafrancaise__titre {
     display: flex;
     justify-content: space-between;
-    font-family: "Shrikhand";
+    font-family: "Shrikhand", sans-serif;
     font-weight: 100;
     margin: 0 20px 0 20px;
     .coeur-menu {
