@@ -37,9 +37,11 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
 
 @-webkit-keyframes slide-left {
   0% {
+    opacity: 1;
     width: 0;
   }
   100% {
+    opacity: 1;
     width: 4em;
   }
 }
@@ -55,6 +57,7 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
 }
 @-webkit-keyframes rotate-center {
   0% {
+    transform: translateX(-40px);
     -webkit-transform: rotate(0);
     transform: rotate(0);
     opacity: 0;
@@ -67,6 +70,7 @@ $color-btn--pink: linear-gradient(170deg, #ec73da, #a05adc);
 }
 @keyframes rotate-center {
   0% {
+    transform: translateX(-100px);
     -webkit-transform: rotate(0);
     transform: rotate(0);
     opacity: 0;
@@ -465,6 +469,15 @@ footer {
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  &:hover .slide-in-right {
+    width: 4em;
+  }
+  &:hover .fas {
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out both;
+  }
+ 
   .haut-description {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -482,30 +495,26 @@ footer {
     margin-right: 10px;
     font-weight: bold;
   }
-  .slide-in-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #99e2d0;
-    opacity: 0;
-    border-radius: 0 15px 15px 0;
-    width: 0;
+  .slide-in-right {    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 66px;
+      width: 0px;
+      background-color: #99e2d0;
+      transition: all .5s ease-in-out;
+      overflow: hidden;
+      border-radius: 0 15px 15px 0;
 
-    .fas {
-      font-size: 30px;
-      color: white;
-    }
-  }
-  &:hover .slide-in-right {
-    -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-  &:hover .fas {
-    -webkit-animation: rotate-center 0.6s ease-in-out both;
-    animation: rotate-center 0.6s ease-in-out both;
+      .fas {
+        font-size: 30px;
+        color: white;
+      }
+      
+     
+  
   }
 }
-
 .delay-1 {
   animation-delay: 0.1s;
 }
