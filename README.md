@@ -38,11 +38,14 @@ Recommandée: HTML / Sass
 
 Interdit: Javascript / Frameworks CSS / Inline CSS
 
+
 Notes
+
 Polices :
 
 Logo & titres: Shrikhand
 Texte: Roboto
+
 Couleurs :
 
 Primaire: #9356DC
